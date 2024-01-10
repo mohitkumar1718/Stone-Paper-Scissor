@@ -5,12 +5,12 @@ const CompPoint=document.querySelector("#computer-score");
 const msg=document.querySelector("#msg");
 
 const choices=document.querySelectorAll(".choice");
-console.log(choices);
+// console.log(choices);
 
 choices.forEach((choice)=>{
     choice.addEventListener("click", ()=>{
         const userChoice=choice.getAttribute("id");
-        console.log("choice was clicked " ,userChoice);
+        // console.log("choice was clicked " ,userChoice);
         predictWinner(userChoice);
 
     })
@@ -25,14 +25,14 @@ const compChoice=()=>{
 const predictWinner=(userChoice)=>{
    const computerChoice=compChoice();
    if(computerChoice==userChoice){
-    console.log("Game was Draw");
+    // console.log("Game was Draw");
     msg.innerText="GAME WAS DRAW!! PLAY AGAIN";
     msg.style.backgroundColor="black";
     msg.style.color="white";
    }
    else if(computerChoice=="paper" && userChoice=="scissor"){
     userWin=true;
-    console.log("User is winner");
+    // console.log("User is winner");
     userScore++;
     userPoint.innerText=userScore;
     msg.innerText=`YOU WIN! YOUR ${userChoice} beats ${computerChoice}`;
@@ -41,7 +41,7 @@ const predictWinner=(userChoice)=>{
    }
    else if(computerChoice=="paper" && userChoice=="stone"){
     userWin=false;
-    console.log("comp is winner");
+    // console.log("comp is winner");
     ComputerScore++;
     CompPoint.innerText=ComputerScore;
     msg.innerText=`YOU loose!  ${userChoice} is beaten by  ${computerChoice}`;
@@ -51,7 +51,7 @@ const predictWinner=(userChoice)=>{
    }
    else if(computerChoice=="stone" && userChoice=="paper"){
     userWin=true;
-    console.log("User is winner");
+    // console.log("User is winner");
     userScore++;
     userPoint.innerText=userScore;
     msg.innerText=`YOU WIN! YOUR ${userChoice} beats ${computerChoice}`;
@@ -60,7 +60,7 @@ const predictWinner=(userChoice)=>{
    }
    else if(computerChoice=="stone" && userChoice=="scissor"){
     userWin=false;
-    console.log("comp is winner");
+    // console.log("comp is winner");
     ComputerScore++;
     CompPoint.innerText=ComputerScore;
     msg.innerText=`YOU loose!  ${userChoice} is beaten by  ${computerChoice}`;
@@ -69,7 +69,7 @@ const predictWinner=(userChoice)=>{
    }
    else if(computerChoice=="scissor" && userChoice=="paper"){
     userWin=false;
-    console.log("comp is winner");
+    // console.log("comp is winner");
     ComputerScore++;
     CompPoint.innerText=ComputerScore;
     msg.innerText=`YOU loose!  ${userChoice} is beaten by  ${computerChoice}`;
@@ -78,7 +78,7 @@ const predictWinner=(userChoice)=>{
    }
    else if(computerChoice=="scissor" && userChoice=="stone"){
     userWin=true;
-    console.log("User is winner");
+    // console.log("User is winner");
     userScore++;
     userPoint.innerText=userScore;
     msg.innerText=`YOU WIN! YOUR ${userChoice} beats ${computerChoice}`;
