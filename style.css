@@ -52,6 +52,10 @@ img{
     font-size: 2rem;
     margin-top: 4rem;
 }
+.score{
+    font-size: 3rem;
+    margin: 1rem;
+}
 
 .msg-container{
     display: flex;
@@ -66,4 +70,5 @@ img{
     color: white;
     padding: 1rem;
     border-radius: 1rem;
+    text-align: center;
 }
